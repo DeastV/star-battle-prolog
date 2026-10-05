@@ -140,14 +140,10 @@ To solve a sample puzzle interactively:
 
 ---
 
-## Author
+## Author & Acknowledgments
 
 - **David Vasques** ([@DeastV](https://github.com/DeastV))
 
-Course project developed for Lógica para Programação (LP), Instituto Superior Técnico, Universidade de Lisboa.
+Coursework project developed for Lógica para Programação (LP), Instituto Superior Técnico, Universidade de Lisboa.
 
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+*Course-Provided Resources:* Auxiliary coordinate utilities and Pattern T implementation (`src/codigoAuxiliar.pl`) and benchmark puzzle definitions (`src/puzzles.pl`) were provided by the LP teaching faculty. The MIT License applies to the solver core (`src/projecto.pl`), deductive heuristics (H1, H2, H3), Pattern I implementation, fixed-point engine, and automated unit test suite.
