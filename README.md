@@ -1,8 +1,11 @@
 # Star Battle Prolog Solver
 
+[![Language](https://img.shields.io/badge/Language-SWI--Prolog-blue.svg)](https://www.swi-prolog.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Automated solver for the **Star Battle** (also known as *Two Not Touch*) combinatorial logic puzzle, written in SWI-Prolog using declarative pattern matching, deductive heuristics, and constraint propagation.
 
-Developed as part of the Lógica para Programação (LP) curriculum at Instituto Superior Técnico (IST), Universidade de Lisboa.
+Developed as part of the **Lógica para Programação (LP)** curriculum at **Instituto Superior Técnico (IST), Universidade de Lisboa**.
 
 ---
 
@@ -140,10 +143,14 @@ To solve a sample puzzle interactively:
 
 ---
 
-## Author & Acknowledgments
+## Known Limitations
 
-- **David Vasques** ([@DeastV](https://github.com/DeastV))
+* **Deterministic Deduction Boundary:** The resolution engine relies strictly on deterministic deductive closures (H1-H3) and geometric patterns (I and T); difficult puzzle configurations that require speculative branch guessing cannot be resolved if the deduction pipeline reaches a fixed point prematurely.
+* **Fixed 2-Star Formulation:** Heuristic patterns are formulated specifically for 2-star requirements ($N \times N$ with 2 stars per row/column/region) and do not generalize directly to arbitrary $k$-star variations without rule reconfiguration.
 
-Coursework project developed for Lógica para Programação (LP), Instituto Superior Técnico, Universidade de Lisboa.
+---
 
-*Course-Provided Resources:* Auxiliary coordinate utilities and Pattern T implementation (`src/codigoAuxiliar.pl`) and benchmark puzzle definitions (`src/puzzles.pl`) were provided by the LP teaching faculty. The MIT License applies to the solver core (`src/projecto.pl`), deductive heuristics (H1, H2, H3), Pattern I implementation, fixed-point engine, and automated unit test suite.
+## Credits
+
+* **David Vasques** ([@DeastV](https://github.com/DeastV))
+* Individual coursework developed for Lógica para Programação (LP) at Instituto Superior Técnico, Universidade de Lisboa. Auxiliary coordinate predicates (`src/codigoAuxiliar.pl`) and puzzle benchmarks (`src/puzzles.pl`) provided by the teaching staff.
